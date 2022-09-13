@@ -1,8 +1,7 @@
 _G.MemerStuff = {}
-_G.MemerStuff.Services = {Players = game:GetService("Players"), RunService = game:GetService("RunService")}
 _G.MemerStuff.Functions = {}
 _G.MemerStuff.Globals = {}
-_G.MemerStuff.Globals.Player = _G.MemerStuff.Services.Players.LocalPlayer
+_G.MemerStuff.Globals.Player = game:GetService("Players").LocalPlayer
 _G.MemerStuff.Functions.RandomString = function()
 	local new_string = game:GetService("HttpService"):GenerateGUID(false):gsub("-",""):lower()
 	local new_string_reconstruct = ""
@@ -17,7 +16,7 @@ _G.MemerStuff.Functions.RandomString = function()
 end
 _G.MemerStuff.Functions.SandboxedPlayers = function()
 	local a = {}
-	for i,v in ipairs(_G.MemerStuff.Services.Players:GetPlayers()) do
+	for i,v in ipairs(game:GetService("Players"):GetPlayers()) do
 		if v ~= _G.MemerStuff.Globals.Player then
 			table.insert(a, v)
 		end
@@ -26,7 +25,7 @@ _G.MemerStuff.Functions.SandboxedPlayers = function()
 end
 _G.MemerStuff.Functions.RandomSandboxedPlayer = function()
 	local a = {}
-	for i,v in ipairs(_G.MemerStuff.Services.Players:GetPlayers()) do
+	for i,v in ipairs(game:GetService("Players"):GetPlayers()) do
 		if v ~= _G.MemerStuff.Globals.Player then
 			table.insert(a, v)
 		end
