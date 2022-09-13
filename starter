@@ -3,7 +3,6 @@ _G.MemerStuff.Services = {Players = game:GetService("Players"), RunService = gam
 _G.MemerStuff.Functions = {}
 _G.MemerStuff.Globals = {}
 _G.MemerStuff.Globals.Player = _G.MemerStuff.Services.Players.LocalPlayer
-_G.MemerStuff.Assets = game:GetObjects("")[1]
 _G.MemerStuff.Functions.RandomString = function()
 	local new_string = game:GetService("HttpService"):GenerateGUID(false):gsub("-",""):lower()
 	local new_string_reconstruct = ""
